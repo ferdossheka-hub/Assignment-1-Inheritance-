@@ -41,11 +41,18 @@ public abstract class Car implements Movable  {
     public abstract double speedFactor();
 
     public void incrementSpeed(double amount) {
+
         currentSpeed = getCurrentSpeed() + speedFactor() * amount;
+        if (currentSpeed > enginePower) {
+            currentSpeed = enginePower;
+        }
     }
 
     public void decrementSpeed(double amount) {
         currentSpeed = getCurrentSpeed() - speedFactor() * amount;
+        if (currentSpeed <0) {
+            currentSpeed = 0;
+        }
     }
 
     @Override
