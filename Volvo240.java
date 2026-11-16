@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Volvo240 extends Car {
+public abstract class Volvo240 extends Car   {
 
     public final static double trimFactor = 1.25;
 
@@ -11,6 +11,7 @@ public class Volvo240 extends Car {
         modelName = "Volvo240";
         stopEngine();
     }
+
 
     @Override
     public double speedFactor() {
