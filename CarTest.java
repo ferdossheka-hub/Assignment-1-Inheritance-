@@ -11,6 +11,7 @@
 
             Saab95 s1 = new Saab95();
 
+
             boolean result = s1.getNrDoors() == 2;
             System.out.println(result);
 
@@ -20,10 +21,15 @@
 
             System.out.println(result1);
 
-            Volvo240 v2 = new Volvo240();
 
-            double speed = v2.speedFactor();
+            Saab95 s4 = new Saab95();
+            double speedbefore = s4.getCurrentSpeed();
+            s4.gas(1);
+            double speedafter = s4. getCurrentSpeed();
+            boolean resultee = speedafter == speedbefore;
+            System.out.println(resultee);
 
-            IO.print(speed);
+
+
         }
     }
